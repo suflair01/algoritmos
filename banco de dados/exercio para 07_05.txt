@@ -1,0 +1,15 @@
+uma empresa tem varios funcionarios
+
+um funcionario só tem um departamento
+
+um departamento tem varios funcionarios 
+
+cada funcionario tem um chefe
+ _______
+|;+; ;+;|
+| _____ | robo tobias   
+
+precisa ter left e right join
+(tentar fazer um join de 3 tabela)
+
+precisa ter auto relacionamento
