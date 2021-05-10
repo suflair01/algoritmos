@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3> quantos homens são ? </h3> <input id="inp_homem" type="number"> 
+
+   <h3> quantas mulheres são ? </h3> <input id="inp_mulher" type="number">
+
+    <br></br>
+
+   <button onclick="peso()"> calcular peso para o elevador </button>
+
+   <div id="div_leve" style="display: none;"> pode usar o elevador tranquilo </div>
+   <div id="div_peso" style="display: none;"> não vai subir ninguem </div>
+
+    
+</body>
+
+<script>
+
+var peso_homem = 0
+var peso_mulher= 0
+
+function peso() {
+
+    peso_homem += inp_homem.value * 80 
+    peso_mulher += inp_mulher.value * 60
+    
+
+if (peso_homem + peso_mulher < 980) {
+
+    div_leve.style.display = "block";
+    div_peso.style.display = "none";
+}
+
+if (peso_homem + peso_mulher > 980){
+   div_leve.style.display = "none";
+    div_peso.style.display = "block";
+ }
+
+}
+
+
+
+
+
+</script>
+
+</html>

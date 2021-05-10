@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="escudo_box">
+    <option value="teste.jpeg">palmeiras</option>
+    <option value="">B</option>
+    <option value="">C</option>
+    <option value="">D</option>
+</select> 
+
+    <button onclick="mostrar_escudo()"> mostrar o time </button>
+    
+
+    <div id="mostrando"> </div>
+</body>
+
+<script>
+
+    function mostrar_escudo(){
+        mostrando.innerhtml = `<img src ="${escudo_box.value}" >`
+    }
+
+</script>
+
+
+</html>

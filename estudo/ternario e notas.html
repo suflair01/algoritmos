@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notas</title>
+    <style>
+        button {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>notas</h3>
+    nota 1 em algoritmos: <input id="ipt_nota1">
+
+    <br>
+
+    nota 2 em algoritmos: <input id="ipt_nota2">
+
+    <br><br><br>
+    <button onclick="notas()">comparar</button>
+
+
+
+</body>
+
+</html>
+
+<script>
+    function notas() {
+        var nota_1 = Number(ipt_nota1.value)
+        var nota_2 = Number(ipt_nota2.value)
+        var media = (nota_1 + nota_2) / 2
+
+        media < 6 ? alert("reprovado") : media >= 6 && media <= 7.5 ? alert("aprovado para automacao") : alert("aprovado dev")
+    }
+
+</script>

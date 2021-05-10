@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 32 - Números Aleatórios</title>
+</head>
+<body>
+    <h2>Numeros Aleatórios</h2>
+    <button onclick="aleatorio()" >sorteando</button>
+    <br>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+
+function aleatorio(){
+  var numero = Math.random()
+
+    if (numero >= 0.5) {
+        div_result.innerHTML =`${numero}, com esse valor eu arrendondaria pra cima <br>`;
+    } else {
+        div_result.innerHTML =`${numero}, com esse valor eu arrendondaria pra baixo <br>`;
+    }
+}
+
+</script>    

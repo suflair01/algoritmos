@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saldo</title>
+    <style>
+        button { width: 100px;}
+    </style>
+</head>
+
+<body>
+    <h3>banco</h3>
+    <I style="color: blue;"></I> Entre com o saldo da conta: <input id="ipt_saldo" placeholder="saldo" autofocus>
+    Entre com o debito da conta:  <input id="ipt_debito" placeholder="debito" autofocus>
+    <br><br><br>
+    <button onclick="check()">analisar conta</button>
+
+    <div id="div_result"> </div>
+
+</body>
+
+</html> 
+
+<script>
+function check() {
+    var saldo = Number(ipt_saldo.value);
+    var debito = Number(ipt_debito.value)
+    var valor_atual = saldo - debito
+    valor_atual <= 0 ? div_result.innerHTML = `<B style="color: red;" > o saldo atual é ${valor_atual} </B>` : 
+        div_result.innerHTML =  `<I style="color: blue;"> o saldo atual é ${valor_atual} </i>`;
+}
+
+</script>

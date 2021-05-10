@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3> quantos homens são ? </h3> <input id="inp_homem" type="number"> 
+
+   <h3> quantas mulheres são ? </h3> <input id="inp_mulher" type="number">
+
+    <br></br>
+
+   <button onclick="peso()"> calcular peso para o elevador </button>
+
+   <div id="div_result"> </div>
+    
+</body>
+
+
+</html>
+
+<script>
+
+var peso_homem = 80
+var peso_mulher= 60
+
+function peso() {
+
+var qnt_homem = Number(inp_homem.value)
+var qnt_mulher = Number(inp_mulher.value)
+var valor_peso = peso_homem * qnt_homem + peso_mulher * qnt_mulher 
+alert(`o elevador suporta até 800 kg e o pesso estimado dessa viagem é ${valor_peso} kg`)
+
+valor_peso > 800 ?  div_result.innerHTML = "alguem tem que descer" : div_result.innerHTML =  "elevador saindo"
+}
+
+</script>

@@ -1,0 +1,50 @@
+<Html>
+
+
+<body>
+    <h2>Você é vegano ou não?</h2>
+    Oque você come no café da manhã: 
+    <select id="cafe_manha">
+        <option value="">Selecione aqui</option>
+        <option value="1">Ovos</option>
+        <option value="2">Leite de arroz</option>
+        <option value="3">Bacon</option>
+    </select>
+
+    <br><br>
+
+    Oque você come no almoço ? 
+    <select id="almoco">
+        <option value="">Selecione aqui</option>
+        <option value="1">Bife</option>
+        <option value="2">Hamburguer de soja</option>
+        <option value="3">Frango grelhado</option>
+
+    </select>
+
+    <br><br>
+
+    Oque você come na janta ?
+    <select id="janta">
+        <option value="">selecione aqui</option>
+        <option value="1">Cupim</option>
+        <option value="2">Picanha de soja</option>
+        <option value="3">Coração</option>
+    </select> 
+
+    <br><br>
+
+    <button onclick="calcular()">Sou vegano</button>
+</body>
+
+</html>
+
+<script>
+    function calcular(){
+        if (cafe_manha.value = "2" && almoco.value == "2" && janta.value == "2") {
+            alert ("Você é vegano");
+        } else {
+            alert ("Você não é vegano");
+        }
+    }
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3> quantos amigos são ? </h3> <input id="inp_amigos" type="number">
+
+    <h3> quanto custa a pizza ? </h3> <input id="inp_pizza" type="number">
+
+    <br></br>
+
+    <button onclick="pizza()"> vai rolar pizza ?</button>
+
+    <div id="div_bom" style="display: none;"> hoje tem pizza </div>
+    <div id="div_triste" style="display: none;"> pizza ta cara demais </div>
+
+
+</body>
+
+<script>
+
+    var num_amigos = 0
+
+
+    function pizza() {
+
+        num_amigos += inp_amigos.value
+
+        var num_pizza = inp_pizza.value
+
+        var resultado = inp_pizza.value / inp_amigos.value
+
+
+        if (resultado <= 20) {
+            div_bom.style.display = "block";
+            div_triste.style.display = "none";
+
+        }
+        if (resultado > 20) {
+            div_bom.style.display = "none";
+            div_triste.style.display = "block";
+
+        }
+
+    }
+
+</script>
+
+</html>

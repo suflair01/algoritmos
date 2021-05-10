@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    lutador 1
+    <div id="lutador1" style="background-color: blue; width: 100%; height: 20px"> vida:  </div>
+
+
+
+    <br>
+    lutador 2
+    <div id="lutador2" style="background-color: red; width: 100%; height: 20px"> vida:  </div>
+
+ <br>
+    <button onclick="check1()"> porrada aleatoria</button>
+    <br> <br>
+
+
+</body>
+
+<script>
+    var vida_1 = 100
+    var vida_2 = 100
+    var golpes = 0
+
+
+    function check1() {
+        var sorteio = Math.random() * 11;
+        golpes++;
+        var atk = Math.random() * 21;
+
+        // eu sorteio numero de 0 a 10, se for menor que 5 o jogador 1 apanha, se não o outro apanha
+
+        // o golpe é de 0 a 20
+
+        if (sorteio < 5) {
+            vida_1 -= atk;
+            lutador1.style.width = `${vida_1}%`;
+            ganhando();
+
+        } else {
+            vida_2 -= atk;
+            lutador2.style.width = `${vida_2}%`;
+            ganhando();
+        }
+        fim_partida1();
+        fim_partida2();
+    }
+
+
+
+    function ganhando() {
+        if ((golpes % 5) == 0) {
+            situacao();
+        }
+    }
+
+    function situacao() {
+        vida_1 > vida_2 ? alert("jogador 1 esta ganhando") : alert("jogador 2 esta ganhando") 
+    }
+
+    function fim_partida1(){
+        if (vida_1 <=0 ) {
+            alert("o lutador 2 ganhou") 
+            lutador1.style.width = 0
+            reinicio();
+        } 
+    }
+
+    function fim_partida2(){
+        if (vida_2 <=0 ) {
+            alert("o lutador 1 ganhou") 
+            lutador2.style.width = 0
+            reinicio();
+        } 
+    }
+
+    function reinicio(){
+        alert("a partida terminou, vamos recomeçar ela")
+  
+    vida_1 = 100
+    vida_2 = 100
+    golpes = 0
+
+    lutador1.style.width = `${vida_1}%`;
+
+    lutador2.style.width = `${vida_2}%`;
+
+    }
+
+
+</script>
+
+</html>

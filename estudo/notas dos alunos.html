@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Aleatórios</title>
+</head>
+<body>
+    <h2>Notas dos alunos</h2>
+    <button onclick="aleatorio()" >sorteando</button>
+    <br>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+
+function aleatorio(){
+    
+    div_result.innerHTML = `${toFixed((Math.random()*10))} <br>`;
+}
+
+</script>    

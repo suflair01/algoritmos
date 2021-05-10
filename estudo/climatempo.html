@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3> qual é temperatura no momento ? </h3> <input id="inp_freq" type="number">
+
+    <br></br>
+
+    <button onclick="check()"> analisar </button>
+
+    <br></br>
+
+    <div id="div_conservado" style="display: none;"> 
+        
+        <img src="https://media.starlightcms.io/workspaces/327329647/large/0263ef5403d391769145c9c55f7b198b.jpg">
+
+    </div>
+
+    <div id="div_estragado" style="display: none;"> 
+        
+        <img src="https://conteudo.imguol.com.br/c/entretenimento/1a/2018/09/11/pao-estragado-1536706056533_v2_450x450.jpg.webp">
+
+    </div>
+
+</body>
+
+<script>
+    function check() {
+        var freq = Number(inp_freq.value)
+
+        freq >= 10 ? div_estragado.style = "block" : div_conservado.style = "block"
+
+    }
+
+
+</script>
+
+</html>

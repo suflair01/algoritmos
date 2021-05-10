@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula17 Input</title>
+</head>
+
+<body>
+    Entre com o sua <b> idade: </b> <br>
+    <input id="inp_idade"></input>
+    
+    <button onclick="analisar()">analisar</button>
+    <br>
+    
+</body>
+
+</html>
+
+<script>
+    function analisar(){
+    var ax_pontos;
+    var ax_idade = inp_idade.value
+
+    var infancia = ax_idade > 12
+    var adolesencia = ax_idade > 18
+    var idoso = ax_idade >= 65
+
+    if (infancia){
+      ax_pontos += 10   
+    }
+
+    if (adolesencia){
+      ax_pontos += 20   
+    }
+
+    if (idoso){
+      ax_pontos += 50   
+    }
+
+
+
+    }
+
+</script>

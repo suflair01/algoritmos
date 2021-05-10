@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>herois</title>
+</head>
+<body>
+    <h1>meus herois favoritos</h1> 
+    <span id="span_hero" style="display: none;">
+        Você é senhor do que cala e escravo do que fala!
+    </span>
+
+    <h1>meus viloes favoritos</h1>
+    <span id="span_vilan" style="display: none;">
+        seila cara
+    </span>
+
+
+    <button id="hero" onclick="img_hero()" style="display: block;"> ver herois </button> 
+
+    <button id="vilan" onclick="img_vilan()" style="display: block;"> ver viloes </button>
+    
+</body>
+
+<script>
+
+function img_hero(){
+    span_hero.style.display = "block";
+        but_mostrar.style.display = 'none';
+        but_esconder.style.display = 'block';
+
+} 
+
+function img_vilan(){
+    span_vilan.style.display = "block";
+        but_mostrar.style.display = 'none';
+        but_esconder.style.display = 'block';
+
+}
+
+</script>
+
+</html>

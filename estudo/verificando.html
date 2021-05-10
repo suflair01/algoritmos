@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <h3> qual a sua renda ?            </h3> <input id="inp_rendauser" type="number">
+   
+   <h3> qual a renda da sa familia ?  </h3> <input id="inp_rendafamilia" type="number">
+
+   
+    <br></br>
+
+   <button onclick="verificar()"> verificar direito</button>
+
+  
+
+
+</body>
+
+<script>
+
+
+
+function verificar(){
+
+var renda_user = inp_rendauser.value
+var renda_familia = inp_rendafamilia.value
+
+if (renda_user <= 1050 && renda_familia <= 2100){
+alert("voce tem direito ao beneficio")
+} 
+else {
+alert("voce não tem direito ao beneficio")    
+}
+
+}
+</script>
+
+</html>

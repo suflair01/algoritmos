@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amor</title>
+</head>
+<body>
+fale um nome de alguem que voce ame
+    <input id="inp_nome"> </input>
+<br>
+quanto voce ama ela ?(em numeros)
+    <input id="inp_qntd"> </input>
+<br>
+    <span id="span_frases"></span> 
+<br>
+    <button onclick="check()"> expressar amor</button>
+</body>
+
+</html>
+ 
+<script>
+
+
+function check() {
+    var contador = 0
+    var vezes = Number(inp_qntd.value)
+
+    var nome = inp_nome.value
+
+while (contador < vezes) { 
+        span_frases.innerHTML +=`${nome} eu te amo <br>`;
+        // alert(`${nome} eu te amo`)
+        contador++;
+    }
+}
+
+</script>

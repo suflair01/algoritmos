@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bombom</title>
+    <style>
+        button { width: 100px;}
+    </style>
+</head>
+
+<body>
+    <h3>chocolates</h3>
+    quantos chocolates foram comprados: <input id="ipt_choco" placeholder="quantidade" autofocus>
+    
+
+    <br><br><br>
+    <button onclick="check()">comprar</button>
+
+    
+
+</body> 
+
+</html> 
+
+<script>
+function check() {
+    var quantidade = Number(ipt_choco.value)
+    var custo = 3.00
+    quantidade >= 12 ? custo -= 0.50 : custo = 3.00
+    var total_compra = custo * quantidade
+    alert(`o total da compra foi ${total_compra}`)
+}
+</script>

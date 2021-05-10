@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 e 5 </title>
+</head>
+
+<body>
+
+    <button onclick="check()">curto 3 e 5</button>
+
+    <div id="div_result"> </div>
+
+</body>
+
+</html>
+
+<script>
+
+
+    function check() {
+        var contador = 1
+        var frase = ""
+
+        while (contador < 101) {
+            if ((contador % 5) == 0 && (contador % 3) == 0) {
+
+                frase = "é tri e penta"
+                div_result.innerHTML += `<br>${frase}`;
+
+            }
+        
+            else if ((contador % 5) == 0) {
+
+            frase = "é penta"
+            div_result.innerHTML += `<br>${frase}`;
+
+        }
+
+        else if ((contador % 3) == 0) {
+
+            frase = "é tri"
+            div_result.innerHTML += `<br>${frase}`;
+        }
+
+            else {
+                div_result.innerHTML += `<br>${contador}`;
+            }
+
+            contador++;
+        }
+    }
+
+</script>

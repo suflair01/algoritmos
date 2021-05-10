@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <h3> quantos amigos são ? </h3> <input id="inp_amigos" type="number"> 
+
+   <h3> quanto custa a pizza ? </h3> <input id="inp_pizza" type="number">
+
+   <h3> quanto vai pode custar por amigo ? ? </h3> <input id="inp_unidade" type="number">
+
+
+
+    <br></br>
+
+   <button onclick="pizza()"> vai rolar pizza ?</button>
+
+   <br></br>
+
+   <div id="div_result"></div>
+
+</body>
+
+<script>
+function pizza(){
+var valor_pizza = Number(inp_pizza.value)
+
+var qnt_amigos = Number(inp_amigos.value)
+
+var valor_amigo = Number(inp_unidade.value)
+
+var custo_unidade = Number(inp_unidade.value)
+
+var valor_dividido = valor_pizza / qnt_amigos
+
+alert(`a pizza vai custar ${valor_dividido}`)
+
+valor_dividido > custo_unidade ? div_result.innerHTML = "deu ruim, sem pizza" : div_result.innerHTML = "deu bom"
+}
+
+
+</script>
+
+</html>

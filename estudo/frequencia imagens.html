@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3> qual sua frequencia ? </h3> <input id="inp_freq" type="number">
+
+    <br></br>
+
+    <button onclick="check()"> analisar </button>
+
+    <br></br>
+
+    <div id="div_viagem" style="display: none;"> 
+        
+        <img src="https://conceitos.com/wp-content/uploads/2014/08/Turista.jpg">
+
+    </div>
+
+    <div id="div_estudo" style="display: none;"> 
+        
+        <img src="https://ubes.org.br/ubesnovo/wp-content/uploads/2019/12/black-african-american-young-girl-student-3MQ4YZU-min.jpg">
+
+    </div>
+
+</body>
+
+<script>
+    function check() {
+        var freq = Number(inp_freq.value)
+
+        freq >= 75 ? div_viagem.style = "block" : div_estudo.style = "block"
+
+    }
+
+
+</script>
+
+</html>
