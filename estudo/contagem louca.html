@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    inicio da contagem
+    <input id="inp_inicio"> </input>
+    <br>
+    final da contagem
+    <input id="inp_final"> </input>
+    <br>
+    ritmo da contagem
+    <input id="inp_fator"> </input>
+    <br>
+    <button onclick="contagem()"> contagem </button>
+
+    <div id="div_result"></div>
+</body>
+
+</html>
+
+<script>
+
+    function contagem() {
+        var inicio = inp_inicio.value
+        var final = inp_final.value
+        var fator = inp_fator.value
+
+
+
+        for (var contador = final; contador >= inicio; contador -= fator) {
+
+            div_result.innerHTML += `<br>${contador}`;
+
+        }
+    }
+</script>

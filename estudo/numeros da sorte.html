@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="inp_numero"> qual seu numero da sorte ?</input>
+    <br>
+    <button onclick="sorteando()"> SORTEIO</button>
+
+</body>
+
+</html>
+<script>
+
+    function sorteando() {
+        numsorte = Number(inp_numero.value)
+
+        for (var contador = 0; contador < 30; contador++) {
+            var numrandom = (Math.random() * 99).toFixed(0)
+
+            if (numrandom == numsorte) {
+                alert(`PARABENS SEU NUMERO FOI O ${contador} A SER SORTEADO`)
+                break
+            }
+        }
+
+        if (contador == 30) {
+            alert("voce não tem sorte")
+        }
+    }
+
+</script>
